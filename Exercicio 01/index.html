@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Metro Quadrado</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <h1>Coloque os seguintes dados:</h1>
+      <div class="container">
+        <label>O comprimento que deseja:</label>
+
+        <input
+          type="number"
+          id="comprimento"
+          placeholder="Comprimento"
+          required
+        />
+
+        <label>A largura que deseja:</label>
+
+        <input type="number" id="largura" placeholder="Largura" required />
+
+        <button id="calcular" type="button" onclick="calculo()">
+          Calcular
+        </button>
+      </div>
+      <div class="informacoes">
+        <label>O comprimento do terreno é:</label>
+        <p id="infocomp"></p>
+
+        <label>A largura do terreno é:</label>
+        <p id="infolarg"></p>
+
+        <label>O tamanho do terreno em metros quadrados é:</label>
+        <p id="resultadom2"></p>
+
+        <label>O preço do terreno é:</label>
+        <p id="resultadopreco"></p>
+
+        <p>O preço do metro quadrado equivale a R$ 200,00</p>
+      </div>
+    </form>
+    <div class="informacoes2">
+      <img
+        src="https://engiobra.com/wp-content/uploads/2014/07/secao-transversal-retangular-cotas.jpg"
+        alt=""
+      />
+      <br />
+      <img
+        src="https://www.infoenem.com.br/wp-content/uploads/2018/03/area_retangulo.png"
+        alt=""
+      />
+      <div class="texto">
+        <h3>Informações</h3>
+        Define-se por área de um retângulo o valor equivalente à medida do
+        espaço ocupado por esta figura geométrica. O retângulo, que é um
+        quadrilátero, é composto por dois lados maiores com medidas iguais e
+        outros dois lados menores com medidas também equivalentes. Os seus
+        ângulos internos medem 90 graus e são chamados de ângulos retos, cuja
+        soma é igual a 360 graus. O retângulo é uma figura plana que possui
+        dimensões que facilitam o cálculo da sua área. O cálculo da área de um
+        retângulo está diretamente ligado ao número exato de lados que a figura
+        possui. Para efetuar este cálculo é preciso saber identificar os lados
+        correspondentes da figura
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

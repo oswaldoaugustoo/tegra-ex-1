@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celsius Para Fahrenhait</title>
+  </head>
+  <body>
+    <h1>Para calcular digite as medidas:</h1>
+    <label>Você vai digitar a temperatura em qual escala (C/F)?</label>
+    <input type="text" id="medida" placeholder="C/F" required />
+    <br />
+    <div id="exibircalculo">
+      <label>Digite a temperaura em Celsius</label>
+      <input
+        type="number"
+        id="tempcelsius"
+        placeholder="Digite a temperatura"
+        required
+      />
+      <br />
+      <p>Temperatura equivalente em Fahrenheit:</p>
+      <p id="fahrenheit"></p>
+      <br />
+      <label>Digite a temperatura em Fahrenheit</label>
+      <input
+        type="number"
+        id="tempfahren"
+        placeholder="Digite a temperatura"
+        required
+      />
+      <br />
+      <p>Temperatura equivalente em Celsius:</p>
+      <p id="celsius"></p>
+    </div>
+    <button type="button" onclick="calcular(medida)">Calcular</button>
+  </body>
+  <script src="script.js"></script>
+</html>
