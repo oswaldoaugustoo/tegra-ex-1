@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rendimento</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Digite as informações aproximadas:</h1>
+
+    <div id="inputs">
+      <h2>Seu salário:</h2>
+      <input type="number" id="salario" placeholder="Valor ao mês" /><br><br>
+
+
+
+
+
+      <label>Conta de água:</label><br>
+      <input type="number" id="agua" placeholder="Água" /><br>
+      <label>Conta de luz:</label><br>
+      <input type="number" id="luz" placeholder="Luz" /><br>
+      <label>Internet:</label><br>
+      <input type="number" id="net" placeholder="Net" /><br>
+      <label>Aluguel:</label><br>
+      <input type="number" id="aluguel" placeholder="Aluguel" /><br>
+      <label>Lazer:</label><br>
+      <input type="number" id="lazer" placeholder="Lazer" /><br>
+      <label>Mercado:</label><br>
+      <input type="number" id="mercado" placeholder="Mercado" /><br>
+
+      <label>Etc (Coloque somente um valor por vez.)</label><br>
+      <button type="button" id="add-campo">Adicionar:</button><br>
+    </div>
+    <button onclick="calcularmes()">Ver mes</button>
+    <label>(1 mês)</label>
+    <div class="resultado">
+      <label id="resultadomensal"></label>
+    </div>
+
+    <div class="mostrarano">
+      <label>Resultado total:</label>
+      <label id="janeiro"></label>
+      <label id="fevereiro"></label>
+      <label id="marco"></label>
+      <label id="abril"></label>
+      <label id="maio"></label>
+      <label id="junho"></label>
+      <label id="julho"></label>
+      <label id="agosto"></label>
+      <label id="setembro"></label>
+      <label id="outubro"></label>
+      <label id="novembro"></label>
+      <label id="dezembro"></label>
+    </div>
+    <button onclick="calcularano()">Ver ano</button>
+    <label id="saldobruto">Seu saldo bruto é:</label>
+    <label id="saldoliquido">Seu saldo líquido é:</label>
+    <p>
+      O valor líquido corresponde ao valor bruto do rendimento com o imposto de
+      renda, que corresponde a 22,5% do rendimento total.
+    </p>
+<div></div>
+
+<br>
+<label id="envestir">quer envestir? </label><br>
+<input   id="valorenvestido"  placeholder="valor a envestir"  type="number">
+<a>em que?<a>
+<select>    
+<option  id="op1" value=""> CDB</option>
+<option id="op2"  value="">celiqui</option>
+<option   id="op3"   value="">poupansa</option>
+<option  id="op4"      value=""> tesouro direto </option>
+</select>
+<br><br>
+<button   id="envestiragora"   onclick="envestir()" > envestir agora?  </button>
+<br>
+<h3>como funsiona?</h3><br>
+<h4>CDB</h4>
+<label>A lógica é exatamente a mesma nos certificados de depósito bancário: quem compra CDBs empresta dinheiro
+   para os bancos financiarem suas atividades de crédito. Os bancos captam dinheiro com os CDBs oferecendo
+    em troca uma remuneração – os juros – aos investidores, por um determinado período.</label><br>
+<a href="">duvidas</a><link rel="stylesheet" href="https://www.btgpactualdigital.com/como-investir/artigos/investimentos/o-que-e-cdb?cmpid=c04:m05:google:11177116067:b:110394111315&creative=466932534632&adposition=&keyword=&matchtype=b&targetid=aud-883435736858:dsa-19959388920&device=c&feeditemid=&loc_interest_ms=&loc_physical_ms=1001672&placement=&s_kwcid=AL!9288!3!466932534632!b!!g!!&utm_channel=PaidSearch&utm_medium=spl&utm_network=g:&utm_source=google&utm_campaign=GSN_BR_BUINVEST_DSA&utm_campaign_id=11177116067&utm_content=GSN_BR_DSA-uniao-All-Webpages&utm_content_id=110394111315&utm_term_id=dsa-1592469244208::::646366627115&gclid=Cj0KCQiAgaGgBhC8ARIsAAAyLfEqCq5xqHUXrCC20twh1d3QI3R13lKQw6YDIPn5oM646sRIj4Nb66EaAtkEEALw_wcB">
+
+<h4>celiqui</h4>
+<label href="">A Selic, ou Taxa Selic, é a taxa básica de juros da economia. A cada 45 dias, ela vira notícia
+   em todo o Brasil – seja por ter aumentado, diminuído ou se mantido estável após a reunião do Copom,
+    o Comitê de Política Monetária do Banco Central. Em janeiro de 2023, por exemplo, a Selic se manteve
+     em 13,75% ao ano.</label><br>
+<a href=""> duvidas   </a><link rel="stylesheet" href="https://simulador.btgpactual.com/step-1"><br>
+<h4>poupansa</h4>
+<label for=""> A poupança é uma reserva financeira, guardada para uma finalidade futura, com rentabilidade
+   definida por lei e que varia de acordo com a taxa Selic. Para Pessoas Físicas, quando a Selic está
+    acima de 8,5% ao ano, ela rende 0,5% ao mês + TR (Taxa Referencial).  </label><br>
+<a href="">duvidas</a><link rel="stylesheet" href="https://bb.com.br/uci/poupanca.html#:~:text=A%20poupan%C3%A7a%20%C3%A9%20uma%20reserva,%2B%20TR%20(Taxa%20Referencial).">
+<h4> tesouro direto </h4>
+<label for=""> É um programa criado em 2002 pelo Tesouro Nacional – órgão responsável pela gestão da dívida pública – para permitir que pessoas físicas comprem papéis do governo federal pela internet. Em outras palavras, pode-se dizer que ao comprar um título do Tesouro Direto o investidor está emprestando dinheiro ao governo.  </label><br>
+
+<a href="">duvidas</a><link rel="stylesheet" href="https://www.tesourodireto.com.br/conheca/conheca-o-tesouro-direto.htm">
+<br><br>
+
+
+
+
+
+  </body>
+  <script>
+    let salarioHTML = document.getElementById('salario')
+    let mercadoHTML = document.getElementById('mercado')
+    let netHTML = document.getElementById('net')
+    let aluguelHTML = document.getElementById('aluguel')
+    let lazerHTML = document.getElementById('lazer')
+    let aguaHTML = document.getElementById('agua')
+    let luzHTML = document.getElementById('luz')
+
+    function calcularmes() {
+      var salario = parseFloat(salarioHTML.value)
+      var mercado = parseFloat(mercadoHTML.value)
+      var net = parseFloat(netHTML.value)
+      var aluguel = parseFloat(aluguelHTML.value)
+      var lazer = parseFloat(lazerHTML.value)
+      var agua = parseFloat(aguaHTML.value)
+      var luz = parseFloat(luzHTML.value)
+      
+      var despesas = agua + luz + net + aluguel + mercado + lazer
+      var resultadoMensal = (despesas - salario) * -1
+      
+      var porcentagem = (resultadoBruto * 22, 5) / 100
+      var resultadoBruto = resultadoMensal * 12
+      var resultadoLiquido = resultadoBruto - porcentagem
+
+
+      if (
+        agua != '' &&
+        salario != '' &&
+        luz != '' &&
+        net != '' &&
+        aluguel != '' &&
+        mercado != '' &&
+        lazer != ''
+      ) {
+        document.getElementById('resultadomensal').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+      } else {
+        alert('Digite todos os dados:')
+      }
+    }
+    function calcularano() {
+      if (resultadoMensal != '') {
+        document.getElementById('janeiro').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('fevereiro').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('marco').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('abril').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('maio').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('junho').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('julho').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('agosto').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('setembro').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('outubro').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('novembro').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+        document.getElementById('dezembro').innerHTML =
+          'R$: ' + resultadoMensal.toFixed(2)
+
+        documment.getElementById('saldobruto').innerHTML = resultadoBruto
+        document.getElementById('saldoliquido').innerHTML = resultadoLiquido
+      }
+    }
+    $('#add-campo').click(function () {
+      $('#inputs').append(
+        `<input  type="number" id="etc" placeholder="Etc" required/>`
+      )
+    })
+  </script>
+</html>
